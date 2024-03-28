@@ -1,0 +1,384 @@
+@font-face {
+  font-family: myfont2;
+  src: url("font.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: myfont2, sans-serif;
+	touch-action: none;
+	-ms-touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#recinfo{
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  color:white;
+  font-size: 4vh;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 800px){
+	#recinfo{
+	  left: 1%;
+    width: 98%;
+    transform: unset;
+    font-size: 3vh;
+	}
+}
+
+@media (max-width: 600px){
+	#recinfo{
+	  left: 1%;
+    width: 98%;
+    transform: unset;
+    font-size: 2vh;
+	}
+}
+
+.waveinfo{
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  z-index: 3;
+  font-size: 3vw;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  white-space: nowrap;
+}
+
+#langselector{
+  display: inline-block;
+  color: white;
+  font-size: 2vh;
+}
+
+#langselector div{
+  cursor: pointer;
+  display: block;
+}
+
+#langselector div:hover{
+  text-decoration: underline;
+}
+
+@keyframes anim228 {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(150%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+@keyframes anim229 {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(125%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+.menu,#fix{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150, 150, 255, 0.7);
+}
+
+#fix{
+    font-family: Arial;
+    cursor: pointer;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fixcont {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:white;
+  font-size: 3vh;
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.play svg {
+  width: 10vw;
+  height: 10vh;
+  cursor: pointer;
+  transition: width 0.5s, height 0.5s;
+}
+
+.play svg:hover {
+  width: 12vw;
+  height: 12vh;
+}
+
+.musicbtn{
+  position: absolute;
+  left:1vw;
+  top:1vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+}
+
+.soundsbtn{
+  position: absolute;
+  right:1vw;
+  top:1vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+}
+
+#bgleft{
+  position: absolute;
+  left:1vw;
+  top:50vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 5px;
+  transform: translateY(-50%);
+}
+
+#bgright{
+  position: absolute;
+  right:1vw;
+  top:50vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 5px;
+  transform: translateY(-50%);
+}
+
+.musicbtn:hover,.soundsbtn:hover,#bgleft:hover,#bgright:hover{
+  background-color: #72d676;
+}
+
+.mgbtn{
+  position: absolute;
+  left: 50vw;
+  top: 70%;
+  transform: translateX(-50%);
+}
+
+@media (max-height: 600px){
+	.mgbtn{
+    font-size: 10px !important;
+  }
+}
+
+.settings img{
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-height: 1081px){
+  .overlay p {
+    font-size: 2vh !important;
+  }
+}
+
+button {
+    background-color: #4fb74c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 2vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+button:hover{
+  background-color: green;
+}
+
+.checkbox{
+  display: block;
+  font-size: 4vh;
+  height: 5vh;
+  color:white;
+  margin-top:4vh;
+  margin-bottom:1vh;
+}
+
+.cb_button{
+  display: inline-block;
+  width: 16vw;
+  height: 100%;
+  margin-right: 3vw;
+  font-size: 2vh;
+  border: 1px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.cb_inner2{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 1vh;
+}
+
+.checkbox > span{
+  position: relative;
+  top: -1.5vh;
+}
+
+.cb_inner{
+  display: inline-block;
+  width: 10%;
+  background-color: white;
+  height: 100%;
+}
+
+.cb_align_left{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  float:left;
+}
+
+.cb_align_right{
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  float:right;
+}
+
+.advp{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 20vw;
+  font-size: 8;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: #e2ab7f;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.pbar{
+  display: block;
+  height: 4vh;
+  background-color: white;
+}
+
+@media (max-width: 650px){
+  .cb_button{
+    width: 20vw;
+  }
+
+  .advp{
+    width: 90vw;
+  }
+}
+
+#timer{
+	position: absolute;
+	z-index:4;
+	top:40vh;
+	left:50%;
+  transform: translate(-50%, -50%);
+}
+
+#timer span{
+	font-size: 25vh;
+	color:white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#moregames{
+  position: absolute;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game{
+  display: inline-block;
+  width: auto;
+  height: 16vh;
+  margin-top: 1vh;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 0.25vw;
+  margin-right: 0.25vw;
+}
+
+.game img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: filter 0.2s;
+}
+
+.game img:hover{
+  filter: brightness(125%);
+}
+
+@media (max-width: 1000px){
+  .advp{
+    width: 60vw !important;
+  }
+
+  .advp button{
+    font-size: 4vh !important;
+  }
+}

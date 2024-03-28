@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script src="engine/libs/jquery.js"></script>
+	<script src="engine/libs/howler.js"></script>
+	<script src="engine/managers/gameloader.js"></script>
+	<script src="game/base/config.js"></script>
+	<script src="engine/storage.js"></script>
+	<script src="engine/sdk.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body oncontextmenu="return false;">
+<script src="engine/managers/input.js"></script>
+<script src="engine/content/dtc.js"></script>
+<script src="engine/content/anim.js"></script>
+<script src="engine/content/gameobject.js"></script>
+<script src="engine/content/world.js"></script>
+<script src="engine/content/vector.js"></script>
+<script src="engine/content/component.js"></script>
+
+<script src="engine/engine.js"></script>
+
+<script src="game/base/pathfinder.js"></script>
+<script src="game/base/sounds.js"></script>
+<script src="game/base/local.js"></script>
+<script src="game/base/game.js"></script>
+<script src="game/base/settings.js"></script>
+<script src="game/base/advprompt.js"></script>
+<script src="game/base/moregames.js"></script>
+
+<script src="game/content/level.js"></script>
+<script src="game/content/castle.js"></script>
+<script src="game/content/grass.js"></script>
+<script src="game/content/road.js"></script>
+<script src="game/content/spawner.js"></script>
+<script src="game/content/decor.js"></script>
+<script src="game/content/missle.js"></script>
+<script src="game/content/tutorial.js"></script>
+<script src="game/content/explode.js"></script>
+
+<script src="game/maps/selector.js"></script>
+<script src="game/maps/map.js"></script>
+<script src="game/maps/map1.js"></script>
+<script src="game/maps/map2.js"></script>
+
+<script src="game/enemies/base.js"></script>
+<script src="game/enemies/man.js"></script>
+<script src="game/enemies/tank.js"></script>
+<script src="game/enemies/air.js"></script>
+
+<script src="game/towers/towerbase.js"></script>
+<script src="game/towers/shootbot.js"></script>
+<script src="game/towers/archer.js"></script>
+<script src="game/towers/bomber.js"></script>
+<script src="game/towers/electric.js"></script>
+<script src="game/towers/sniper.js"></script>
+<script src="game/towers/upgrade.js"></script>
+
+<div class="waveinfo"></div>
+
+<div id="fix" onclick="imready()" style="display:none">
+<div style="pointer-events:none" class="fixcont">
+	<p style="pointer-events:none"><img src="textures/tut.png" style="pointer-events:none"></p>
+	<p style="pointer-events:none" translate="If you are ready, tap the screen with your cursor or finger.">Если вы готовы, нажмите на экран курсором или пальцем.</p>
+</div>
+</div>
+<div class="menu" style="display:block">
+	<center id="recinfo">
+		<div><span translate="Level: ">Уровень: </span><span id="mlevel">1</span></div>
+		<div class="lasttime" style="display:none"><span translate="Completed in: ">Пройден за: </span><span id="lasttimee">0:00</span></div>
+		<div class="mycrec"><span translate="Best Record: ">Лучший рекорд: </span><span id="timerecord">не установлен</span></div>
+	</center>
+	<div class="play" style="animation: anim229 1s infinite;" onclick="PlayClick()"><svg viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#20ac22" d="M36 32a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28z"></path><path fill="#FFF" d="M8 7l22 11L8 29z"></path></g></svg></div>
+	<span class="settings">
+		<div class="musicbtn" varstate="UserMusEnable" default="true" isMobile="false" isPC="true">
+			<div class="en">
+				<img src="textures/music_on.png">
+			</div>
+			<div class="dis">
+				<img src="textures/music_off.png">
+			</div>
+	</div>
+	<div class="soundsbtn" varstate="UserSoundEnable" default="true" isMobile="true" isPC="true">
+		<div class="en">
+			<img src="textures/sounds_on.png">
+		</div>
+		<div class="dis">
+			<img src="textures/sounds_off.png">
+		</div>
+</div>
+</span>
+<button class="mgbtn" translate="&#128073; Recommended games" onclick="moregames()">&#128073; Рекомендованные игры</button>
+<div id="bgleft"><svg viewBox="-4.5 0 20 20" version="1.1" fill="white" stroke="white"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [white]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="white"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[white]"> </path> </g> </g> </g> </g></svg>
+</div>
+<div id="bgright"><svg viewBox="-4.5 0 20 20" version="1.1" fill="white" stroke="white" style="transform:rotate(180deg)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [white]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="white"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[white]"> </path> </g> </g> </g> </g></svg>
+</div>
+<div id="moregames" style="display:none">
+<center><button translate="Back" onclick="moregamesback()">Назад</button></center>
+</div>
+</div>
+</body>
+</html>
