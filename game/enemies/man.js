@@ -3,5 +3,9 @@ class ManEnemy extends BaseEnemy{
     super(path);
     this.hp = 3*curmap.enemyhpmul;
     this.setTexture(getTex('man'));
+
+    if(curmap.fixedreward){
+      this.reward = curmap.fixedreward;
+    }
   }
 }

@@ -29,7 +29,7 @@ class BaseEnemy extends GameObject{
         dim.map.splice(dim.map.indexOf(this),1);
         BaseEnemy.pool.splice(BaseEnemy.pool.indexOf(this),1);
         new Explode(this.pos,this.size);
-        money+=this.reward;
+        money = parseInt(money + this.reward);
         this.isDead = true;
 
         wavekills++;

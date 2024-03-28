@@ -101,6 +101,7 @@ PlayClick.flag = false;
 function imready(){
 	$('#fix').hide();
 	OnPause = false;
+	playMusic();
 }
 
 document.addEventListener("visibilitychange", function() {

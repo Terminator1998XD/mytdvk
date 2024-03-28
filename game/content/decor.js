@@ -24,7 +24,7 @@ class Decor extends GameObject{
   }
 
   Serilize(){
-    return {x: this.pos.x, y: this.pos.y, tex: this.tex};
+    return {x: parseInt(this.pos.x), y: parseInt(this.pos.y), tex: this.tex};
   }
 
   static Deserilize(data){

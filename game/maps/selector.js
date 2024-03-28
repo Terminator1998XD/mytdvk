@@ -1,6 +1,6 @@
 function MapSelector(){
   MapSelector.mapid = storage.get('map') == null ? 0 : parseInt(storage.get('map'));
-  var maplist = [new Map1(), new Map2()]
+  var maplist = [new Map1(), new Map2(),new Map3(),new Map4(),new Map5(),new Map6(),new Map7(),new Map8(),new Map9(),new Map10()];
 
   $('#bgleft').click(function(){
     MapSelector.mapid--;

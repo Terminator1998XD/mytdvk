@@ -4,5 +4,9 @@ class TankEnemy extends BaseEnemy{
     this.hp = 6*curmap.enemyhpmul;
     this.reward = 4*curmap.enemyhpmul;
     this.setTexture(getTex('tank'));
+
+    if(curmap.fixedreward){
+      this.reward = curmap.fixedreward;
+    }
   }
 }

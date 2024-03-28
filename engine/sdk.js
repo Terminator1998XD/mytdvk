@@ -15,7 +15,6 @@ function sdk(callback){
         ysdk.getLeaderboards().then(lb => {
 					window.lb = lb;
 			  });
-
         window.ysdk = ysdk;
         storage(callback);
       });
